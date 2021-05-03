@@ -53,7 +53,7 @@ Ci vediamo mercoledì per parlarne.
 
 import { Variable } from "@angular/compiler/src/render3/r3_ast";
 import { Component, VERSION } from "@angular/core";
-import { PostitService } from "./postit.service";
+//import { PostitService } from "./postit.service";
 
 export interface postInterf {
   title: string;
@@ -104,19 +104,6 @@ export class AppComponent {
   listaPostIt: Array<postIt>;
   selezione: number = 0;
 
-  constructor(private pis: PostitService) {}
-  newPost(itemName: string) {
-    this.selezione.luogo = itemName;
-    this.wbs
-      .getData(itemName)
-      .subscribe(
-        (x: any) => (this.selezione.valore = x.data[0].temp),
-        err => console.error("Observer got an error: " + err)
-      );
-  }
-
-  /*
-
   //posso fare una funzione scelta che in base al valore selezionato fa partire una funzione
   creaNuovo() {
     this.selezione = 1;
@@ -140,5 +127,5 @@ export class AppComponent {
     pi.setTag(_tag);
 
     //console.log(pi);
-  }*/
+  }
 }
