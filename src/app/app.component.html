@@ -1,0 +1,33 @@
+<hello name="{{ name }}"></hello>
+
+<ul name="butt">
+  <button id="New" (click) = "creaNuovo()">Crea Nuovo</button>
+  <br />
+  <br />
+  <button id="Leggi">Leggi</button>
+  <br />
+  <br />
+  <button id="Modifica">Modifica</button>
+</ul>
+
+<hr />
+
+<p *ngIf="selezione == 1">
+  Inserisci titolo: <br>
+  <input id="titolo" type="text" /><br><br>
+  Inserisci messaggio: <br>
+  <textarea id="mess" rows="7" cols="40" maxlength="300"> </textarea><br><br>
+  Inserisci tag (facoltativo): <br>
+  <input id="tag" type="tag" /><br><br>
+
+
+  <button id= "conferma" (click) = "conferma(getElementById(titolo).innerHTML)">conferma</button>
+  <br><br>
+  <button id= "annulla" (click) = "annulla()">annulla</button>
+
+</p>
+
+
+<ul name="Visualizza">
+
+</ul>
